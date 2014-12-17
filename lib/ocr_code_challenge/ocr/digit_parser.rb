@@ -8,10 +8,10 @@ module OCR
     def parse
       line1, line2, line3, line4 = @input.split("\n")
 
-      line1_by_3 = line1.scan /.../
-      line2_by_3 = line2.scan /.../
-      line3_by_3 = line3.scan /.../
-      line4_by_3 = line4.scan /.../
+      line1_by_3 = line1.scan(/.../)
+      line2_by_3 = line2.scan(/.../)
+      line3_by_3 = line3.scan(/.../)
+      line4_by_3 = line4.scan(/.../)
 
       digits = []
 

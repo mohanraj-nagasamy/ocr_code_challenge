@@ -257,7 +257,75 @@ STR
     end
   end
 
+  describe "parse and format 000000051" do
+    let(:random_number) do
+<<-STR
+ _  _  _  _  _  _  _  _    
+| || || || || || || ||_   |
+|_||_||_||_||_||_||_| _|  |
+                           
+STR
+    end
+
+    describe "#parse" do
+      it "should parse random_number" do
+        described_class.new(random_number).parse.should eq [0,0,0,0,0,0,0,5,1]
+      end
+    end
+
+    describe "#format" do
+      it "should format random_number" do
+        described_class.new(random_number).format.should eq ('000000051')
+      end
+    end
+  end
+
   describe "error scenarios" do
+    describe "parse and format '49006771? ILL'" do
+      let(:random_number) do
+<<-STR
+    _  _  _  _  _  _     _ 
+|_||_|| || ||_   |  |  | _ 
+  | _||_||_||_|  |  |  | _|
+                           
+STR
+      end
+
+      describe "#parse" do
+        it "should parse random_number" do
+          described_class.new(random_number).parse.should eq [4,9,0,0,6,7,7,1,'?']
+        end
+      end
+
+      describe "#format" do
+        it "should format random_number" do
+          described_class.new(random_number).format.should eq ('49006771? ILL')
+        end
+      end
+    end
+
+    describe "parse and format '1234?678? ILL'" do
+      let(:random_number) do
+<<-STR
+    _  _     _  _  _  _  _ 
+  | _| _||_| _ |_   ||_||_|
+  ||_  _|  | _||_|  ||_| _ 
+                            
+STR
+      end
+
+      describe "#parse" do
+        it "should parse random_number" do
+          described_class.new(random_number).parse.should eq [1,2,3,4,'?',6,7,8,'?']
+        end
+      end
+
+      describe "#format" do
+        it "should format random_number" do
+          described_class.new(random_number).format.should eq ('1234?678? ILL')
+        end
+      end
+    end
 
   end
 
