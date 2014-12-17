@@ -20,7 +20,10 @@ RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.syntax = :should
   end
-
+  config.mock_with :rspec do |mocks|
+    mocks.syntax = :should
+  end
+  
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin

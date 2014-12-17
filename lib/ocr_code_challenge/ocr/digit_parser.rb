@@ -1,3 +1,4 @@
+require 'ocr_code_challenge/ocr/digit_mapper'
 module OCR
   class DigitParser
 
@@ -6,7 +7,8 @@ module OCR
     end
     
     def parse
-      line1, line2, line3, line4 = @input.split("\n")
+      line1, line2, line3, line4 = @input.split("\n") if @input.is_a? String
+      line1, line2, line3, line4 = @input if @input.is_a? Array
 
       line1_by_3 = line1.scan(/.../)
       line2_by_3 = line2.scan(/.../)
