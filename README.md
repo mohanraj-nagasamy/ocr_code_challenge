@@ -1,10 +1,10 @@
 # OcrCodeChallenge
 
-This gem is Bank OCR
+This gem is to read Bank OCR charaters. The spec is below
 
-Specification
+### Specification
 
-User Story 1
+#### User Story 1
 
 The following format is created by the machine:
 ```
@@ -19,7 +19,7 @@ Each account number should have 9 digits, all of which should be in the range 0-
 
 Write a program that can take this file and parse it into actual account numbers.
 
-User Story 2
+#### User Story 2
 
 You find the machine sometimes goes wrong while scanning. You will need to validate that the numbers are valid account numbers using a checksum. This can be calculated as follows:
 
@@ -32,7 +32,8 @@ checksum calculation:
 ```
 ((1*d1) + (2*d2) + (3*d3) + ... + (9*d9)) mod 11 == 0
 ```
-User Story 3
+
+#### User Story 3
 
 Your boss is keen to see your results. He asks you to write out a file of your findings, one for each input file, in this format:
 
@@ -46,7 +47,7 @@ The output file has one account number per row. If some characters are illegible
 
 Example input and output
 
-User Story 1
+#### User Story 1
 ```
  _  _  _  _  _  _  _  _  _ 
 | || || || || || || || || |
@@ -125,21 +126,23 @@ User Story 1
 ```
 => 123456789
 
-User Story 2
+#### User Story 2
 
-Valid: 
+** Valid: **
 ```
 711111111
 123456789
 490867715
 ```
-Invalid:
+** Invalid: **
 ```
 888888888
 490067715
 012345678
 ```
-User Story 3
+
+#### User Story 3
+
 ```
  _  _  _  _  _  _  _  _    
 | || || || || || || ||_   |
