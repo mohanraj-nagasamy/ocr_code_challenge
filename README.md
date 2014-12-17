@@ -128,13 +128,13 @@ Example input and output
 
 #### User Story 2
 
-** Valid: **
+**Valid:**
 ```
 711111111
 123456789
 490867715
 ```
-** Invalid: **
+**Invalid:**
 ```
 888888888
 490067715
