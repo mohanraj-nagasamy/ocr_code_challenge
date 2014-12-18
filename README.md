@@ -186,8 +186,8 @@ Look at the ```file_parser_spec.rb``` and ``` file_parser.rb ``` as to how to us
 ```
 require 'ocr_code_challenge'
 file = OCR::FileParser.new("spec/test_file.txt")
-file.parsed
-file.formated
+# file.parsed
+# file.formated 
 file.write_to("output_file_name.txt")
 ```
 
