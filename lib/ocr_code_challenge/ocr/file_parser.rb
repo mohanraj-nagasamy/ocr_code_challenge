@@ -34,7 +34,7 @@ module OCR
     end
 
     def output_contents
-      digits.map(&:format).join("\n") + "\n"
+      parsed_digits.map(&:format).join("\n") + "\n"
     end
   end
 end

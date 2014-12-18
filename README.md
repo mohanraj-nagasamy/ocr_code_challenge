@@ -1,6 +1,6 @@
 # OcrCodeChallenge
 
-This gem is to read Bank OCR charaters. The spec is below
+This gem is to Bank OCR charater reader. The spec is below:
 
 ### Specification
 
@@ -182,7 +182,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Look at the ```file_parser_spec.rb``` and ``` file_parser.rb ``` as to how to use.
+```
+file = OCR::FileParser.new("spec/test_file.txt")
+file.parse
+file.format
+file.write_to("output_file_name.txt")
+```
 
 ## Contributing
 
