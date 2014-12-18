@@ -18,7 +18,7 @@ RSpec.configure do |config|
 
   config.order = :random
   config.expect_with :rspec do |expectations|
-    expectations.syntax = :should
+    expectations.syntax = [:should, :expect]
   end
   config.mock_with :rspec do |mocks|
     mocks.syntax = :should

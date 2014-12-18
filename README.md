@@ -185,8 +185,8 @@ Or install it yourself as:
 Look at the ```file_parser_spec.rb``` and ``` file_parser.rb ``` as to how to use.
 ```
 file = OCR::FileParser.new("spec/test_file.txt")
-file.parse
-file.format
+file.parsed
+file.formated
 file.write_to("output_file_name.txt")
 ```
 

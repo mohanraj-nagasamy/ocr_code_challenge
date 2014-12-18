@@ -37,5 +37,12 @@ describe CheckSumCalculator do
         subject.each { |e| e.valid?.should eq false }
       end
     end
+
+    context "with invalid chars" do
+      let(:subject) { CheckSumCalculator.new('88888?888 ILL') }
+      it "should raise error" do
+        expect { subject.checksum }.to raise_error
+      end
+    end
   end
 end

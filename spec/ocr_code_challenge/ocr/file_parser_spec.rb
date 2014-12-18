@@ -5,21 +5,21 @@ require 'ocr_code_challenge/ocr/file_parser'
 describe OCR::FileParser do
   subject { described_class.new("spec/test_file.txt") }
 
-  describe "#parse" do
+  describe "#parsed" do
     it "should return 1..9" do
-      subject.parse.first.should eq (1..9).to_a
+      subject.parsed.first.should eq (1..9).to_a
     end
     it "should return with invalid contents" do
-      subject.parse.last.should eq [1, 2, 3, 4, "?", 6, 7, 8, "?"]
+      subject.parsed.last.should eq [1, 2, 3, 4, "?", 6, 7, 8, "?"]
     end
   end
 
-  describe "#format" do
+  describe "#formated" do
     it "should return 1..9" do
-      subject.format.first.should eq (1..9).to_a.join("")
+      subject.formated.first.should eq (1..9).to_a.join("")
     end
     it "should return with invalid contents" do
-      subject.format.last.should eq '1234?678? ILL'
+      subject.formated.last.should eq '1234?678? ILL'
     end
   end
 
