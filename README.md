@@ -184,6 +184,7 @@ Or install it yourself as:
 
 Look at the ```file_parser_spec.rb``` and ``` file_parser.rb ``` as to how to use.
 ```
+require 'ocr_code_challenge'
 file = OCR::FileParser.new("spec/test_file.txt")
 file.parsed
 file.formated
